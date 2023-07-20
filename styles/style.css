@@ -6,10 +6,15 @@
     padding: 0;
 }
 
-/* .section-container {
-    max-width: 1200px;
-    margin: 0 auto;
-} */
+.section-container {
+    display: flex;
+    width: 100%;
+    max-width: 75rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+}
 
 .home-panel-5 {
     display: flex;
@@ -18,6 +23,7 @@
     background: var(--pup-bg-01, url('../assets/images/carousel_bg.png'), lightgray 50% / cover no-repeat);
     padding: 100px 0;
     width: 100%;
+    overflow: hidden;
 }
 
 /* Start of Department Carousel */
@@ -85,7 +91,7 @@
     line-height: normal;
 }
 
-.dept-title :nth-child(2) {
+.dept-title p:nth-child(2) {
     align-self: stretch;
     color: var(--white-01, #FFF);
     text-align: center;
@@ -246,8 +252,120 @@
 }
 /* End of Department Carousel */
 
+
+/* Start of home panel 6 and events carousel */
+.home-panel-6 {
+    background: no-repeat url('../assets/images/announcements_section.png');
+    background-size: cover;
+    display: flex;
+    max-width: 100%;
+    padding: 100px 10px;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+}
+
+.gallery-item-6, .gallery-item-7  {
+    display: none;
+}
+
+.announcement-contents {
+    display: flex;
+    padding: 2.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.announcement-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; 
+}
+
+.announcement-title > p {
+    position: relative;
+}
+
+.announcement-title > p::after {
+    content: '';
+    height: 4px;
+    width: 30%;
+    background: #F97D01;
+    position: absolute;
+    left: 0;
+    bottom: -50%;
+}
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.owl-prev-btn, .owl-next-btn {
+    cursor: pointer;
+}
+
+.announcement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 20px;
+}
+
+.event-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    align-self: stretch;
+}
+
+.event-desc p:first-child {
+    align-self: stretch;
+    color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.event-desc p:nth-child(2) {
+    align-self: stretch;
+    color:#F97D01;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* End of home panel 6 and events carousel */
+
+@media screen and (max-width: 900px) {
+    .dept-title {
+        max-width: 100px;
+        margin: 0 auto;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .gallery-item-5, .gallery-item-1  {
         display: none;
     }
+
+    
 }

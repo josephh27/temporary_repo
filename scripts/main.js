@@ -1,3 +1,5 @@
+
+// Start of departments carousel
 const galleryContainer = document.querySelector('.gallery-container');
 const galleryControlsContainer = document.querySelector('.gallery-controls');
 const galleryControls = ['previous', 'next'];
@@ -19,6 +21,8 @@ class Carousel {
             el.classList.remove('gallery-item-3');
             el.classList.remove('gallery-item-4');
             el.classList.remove('gallery-item-5');
+            el.classList.remove('gallery-item-6');
+            el.classList.remove('gallery-item-7');
         })
 
         this.carouselArray.slice(0, 5).forEach((el, i) => {
@@ -58,3 +62,36 @@ const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryCont
 
 exampleCarousel.setControls();
 exampleCarousel.useControls();
+// End of departments carousel
+
+// Start of events carousel
+
+$(document).ready(function () {
+
+    $('.owl-carousel').owlCarousel({
+        autoplayHoverPause: true,
+        dots: false,
+        responsive: {
+            0: {items: 1},
+            600: {items: 2},
+            1000: {items: 3}
+        }
+    });
+
+    var owl = $('.owl-carousel');
+    owl.owlCarousel();
+    // Go to the next item
+    $('.owl-next-btn').click(function() {
+        owl.trigger('next.owl.carousel');
+    })
+    // Go to the previous item
+    $('.owl-prev-btn').click(function() {
+        // With optional speed parameter
+        // Parameters has to be in square bracket '[]'
+        owl.trigger('prev.owl.carousel');
+    })
+
+});
+
+
+// End of events carousel
