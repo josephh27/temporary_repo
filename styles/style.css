@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+} */
+
+.home-panel-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--pup-bg-01, url('../assets/images/carousel_bg.png'), lightgray 50% / cover no-repeat);
+    padding: 100px 0;
+    width: 100%;
+}
+
+/* Start of Department Carousel */
+.gallery {
+    position: relative;
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    display: flex;
+    padding: 2.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.gallery-container {
+    align-items: center;    
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1000px;
+    height: 400px;
+    display: flex;
+    gap: 1rem;
+}
+
+.gallery-item {
+    display: flex;
+    padding: 2.5rem 0.2rem 2rem 0.2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    width: 18%;
+    height: auto;
+    z-index: 0;
+    border-radius: 15px;
+    background-size: contain;
+    border: 1px solid var(--white-border-01, rgba(255, 255, 255, 0.50));
+    background: rgba(128, 0, 0, 0.70);
+    overflow: hidden;
+}
+
+.dept-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+.dept-title p:first-child {
+    color: var(--white-01, #FFF);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.dept-title :nth-child(2) {
+    align-self: stretch;
+    color: var(--white-01, #FFF);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.dept-button {
+    display: flex;
+    padding: 0.25rem 1.25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.3125rem;
+    background: var(--cpe-primary-01, #F97D01);
+    color: var(--pup-red-01, #800000);
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.gallery-image {
+    width: 80%;
+    max-width: 80%;
+}
+
+.gallery-item-1 {
+    left: 15%;
+    opacity: .6;
+    transform: translateX(-50%);
+}
+
+.gallery-item-2, .gallery-item-4 {
+    height: auto;
+    opacity: 0.8; 
+    width: 20%;
+    min-width: 180px;
+    z-index: 1;
+}
+
+.gallery-item-2 {
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+.gallery-item-3 {
+    box-shadow: -2px 5px 33px 6px rgba(0,0,0,0.35);
+    height: auto;
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    min-width: 200px;
+    z-index: 2;
+}
+
+.gallery-item-4 {
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+.gallery-item-5 {
+    left: 85%;
+    opacity: .6;
+    transform: translateX(-50%);
+}
+
+.gallery button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 0 50px;
+    padding: 10px;
+    text-transform: capitalize;
+    height: 50px;
+    width: 50px;
+    background: red;
+    border-radius: 50%;
+    z-index: 99;
+}
+
+.gallery-controls-button:focus {
+    outline: none;
+}
+
+.gallery-controls-previous {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.gallery-controls-previous::before {
+    border: solid #000;
+    border-width: 0 5px 5px 0;
+    content: '';
+    display: inline-block;
+    height: 3px;
+    left: 17px;
+    padding: 8px;
+    position: absolute;
+    top: 12px;
+    transform: rotate(135deg);
+    transition: left 0.15s ease-in-out;
+    width: 5px;
+}
+
+
+.gallery-controls-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+.gallery-controls-next::before {
+    border: solid #000;
+    border-width: 0 5px 5px 0;
+    content: '';
+    display: inline-block;
+    height: 3px;
+    padding: 8px;
+    position: absolute;
+    right: 17px;
+    top: 12px;
+    transform: rotate(-45deg);
+    transition: right 0.15s ease-in-out;
+    width: 5px;
+}
+
+.gallery-nav {
+    bottom: -15px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.gallery li {
+    background: #ccc;
+    border-radius: 50%;
+    height: 10px;
+    margin: 0 16px;
+    width: 10px;
+}
+
+.gallery-nav li.gallery-item-selected {
+    background: #555;
+}
+/* End of Department Carousel */
+
+@media screen and (max-width: 600px) {
+    .gallery-item-5, .gallery-item-1  {
+        display: none;
+    }
+}
