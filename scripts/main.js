@@ -64,11 +64,10 @@ exampleCarousel.setControls();
 exampleCarousel.useControls();
 // End of departments carousel
 
-// Start of events carousel
+// Start of events and announcements carousel
 
 $(document).ready(function () {
-
-    $('.owl-carousel').owlCarousel({
+    $("#owl-carousel-2, #owl-carousel-1").owlCarousel({
         autoplayHoverPause: true,
         dots: false,
         responsive: {
@@ -80,20 +79,17 @@ $(document).ready(function () {
         rewind: true
     });
 
-    var owl = $('.owl-carousel');
-    owl.owlCarousel();
     // Go to the next item
     $('.owl-next-btn').click(function() {
-        owl.trigger('next.owl.carousel');
+        $(this).closest('.announcement-contents').find('.owl-carousel').trigger('next.owl.carousel');
+
     })
     // Go to the previous item
     $('.owl-prev-btn').click(function() {
         // With optional speed parameter
         // Parameters has to be in square bracket '[]'
-        owl.trigger('prev.owl.carousel');
+        $(this).closest('.announcement-contents').find('.owl-carousel').trigger('prev.owl.carousel');
     })
 
 });
-
-
-// End of events carousel
+// End of events and announcements carousel
