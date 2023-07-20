@@ -271,7 +271,7 @@
 
 .announcement-contents {
     display: flex;
-    padding: 2.5rem;
+    padding: 2.5rem 1rem;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
@@ -291,6 +291,8 @@
     font-style: normal;
     font-weight: 700;
     line-height: 100%; 
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .announcement-title > p {
@@ -383,5 +385,26 @@ a {
         display: none;
     }
 
+    .announcement-title {
+        font-size: 1.2rem;
+    }
+
+    .owl-prev-btn, .owl-next-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .announcement-title > div:nth-child(2) {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     
+}
+
+@media screen and (max-width: 325px) {
+    .announcement-title > p::after {
+        width: 100%;
+    }
 }
